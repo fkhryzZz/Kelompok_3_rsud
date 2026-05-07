@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Pasien</title>
+
+  <!-- Bootstrap 5 CSS dari CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <!-- CSS kita sendiri (dipisah dari HTML) -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="d-flex vh-100 overflow-hidden">
+
+    <aside class="sidebar flex-shrink-0 d-flex flex-column py-4 px-3">
+
+      <!-- Logo / Nama Aplikasi -->
+      <div class="sidebar-brand mb-5 px-2">
+        <span class="brand-icon me-2">&#43;</span>
+        <span class="brand-text">NIce Health</span>
+      </div>
+
+      <!-- 
+        Menu Navigasi
+        PELAJARI: nav-link Bootstrap dipakai untuk item navigasi.
+        Kelas "active" menandai halaman yang sedang aktif.
+      -->
+      <nav class="d-flex flex-column gap-1">
+
+        <a href="#" class="nav-item-link">
+          <i class="bi bi-grid-1x2"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="#" class="nav-item-link">
+          <i class="bi bi-calendar-check"></i>
+          <span>Janji Temu</span>
+        </a>
+
+        <!-- Item aktif (halaman saat ini) -->
+        <a href="#" class="nav-item-link active">
+          <i class="bi bi-people"></i>
+          <span>Pasien</span>
+        </a>
+
+        <a href="#" class="nav-item-link">
+          <i class="bi bi-heart-pulse"></i>
+          <span>Dokter</span>
+        </a>
+
+        <a href="#" class="nav-item-link">
+          <i class="bi bi-clipboard2-pulse"></i>
+          <span>Jadwal Dokter</span>
+        </a>
+
+        <a href="#" class="nav-item-link">
+          <i class="bi bi-diagram-3"></i>
+          <span>Departemen</span>
+        </a>
+
+        <a href="#" class="nav-item-link">
+          <i class="bi bi-credit-card"></i>
+          <span>Pembayaran</span>
+        </a>
+
+      </nav>
+    </aside>
+    <!-- ===================== END SIDEBAR ===================== -->
+
+
+    <!-- ===================== KONTEN UTAMA ===================== -->
+    <!-- 
+      flex-grow-1 = konten ini mengisi sisa ruang yang tidak dipakai sidebar.
+      overflow-auto = jika konten panjang, bisa di-scroll.
+    -->
+    <main class="main-content flex-grow-1 d-flex flex-column overflow-auto">
+
+      <!-- ------ TOPBAR / HEADER ------ -->
+      <!-- 
+        PELAJARI: d-flex justify-content-between = dua elemen di ujung kiri dan kanan.
+        align-items-center = sejajar secara vertikal.
+      -->
+      <header class="topbar d-flex justify-content-between align-items-center px-4 py-3">
+
+        <!-- Input Pencarian -->
+        <!-- 
+          PELAJARI: input-group di Bootstrap membungkus icon + input field bersama.
+        -->
+        <div class="search-wrapper">
+          <div class="input-group">
+            <span class="input-group-text search-icon-box">
+              <i class="bi bi-search"></i>
+            </span>
+            <input type="text" class="form-control search-input" placeholder="Pencarian"/>
+          </div>
+        </div>
+
+        <!-- Info Admin -->
+        <div class="d-flex align-items-center gap-2">
+          <div class="avatar-circle">A</div>
+          <span class="admin-name">Admin</span>
+          <i class="bi bi-chevron-down text-muted small"></i>
+        </div>
+
+      </header>
+      <!-- ------ END TOPBAR ------ -->
+
+
+      <!-- ------ ISI HALAMAN ------ -->
+      <div class="page-body px-4 py-4">
+
+        <!-- Judul Halaman -->
+        <h4 class="page-title mb-4">Daftar Pasien</h4>
+
+        <!-- 
+          DAFTAR PASIEN
+          PELAJARI: Setiap pasien ditampilkan sebagai "card" berbentuk baris.
+          d-flex align-items-center = isi card sejajar horizontal.
+        -->
+        <div class="d-flex flex-column gap-3">
+
+          <!-- Card Pasien 1 -->
+          <!-- 
+            PELAJARI: Ini adalah komponen card pasien.
+            Didalamnya ada: avatar, nama+badge+id, dan chevron di kanan.
+          -->
+          <div class="patient-card d-flex align-items-center px-3 py-3">
+
+            <!-- Avatar dengan inisial -->
+            <div class="patient-avatar me-3">SS</div>
+
+            <!-- Info Pasien -->
+            <div class="flex-grow-1">
+              <div class="d-flex align-items-center gap-2">
+                <span class="patient-name">Sahla Saputra</span>
+                <!-- Badge status -->
+                <span class="badge-aktif">AKTIF</span>
+              </div>
+              <div class="patient-id">PASIEN : 01</div>
+            </div>
+
+            <!-- Tombol panah ke kanan -->
+            <i class="bi bi-chevron-right text-muted"></i>
+          </div>
+          <!-- End Card Pasien 1 -->
+
+          <!-- Card Pasien 2 -->
+          <div class="patient-card d-flex align-items-center px-3 py-3">
+
+            <div class="patient-avatar me-3">RR</div>
+
+            <div class="flex-grow-1">
+              <div class="d-flex align-items-center gap-2">
+                <span class="patient-name">Dimas kanjeng</span>
+                <span class="badge-aktif">AKTIF</span>
+              </div>
+              <div class="patient-id">PASIEN : 02</div>
+            </div>
+
+            <i class="bi bi-chevron-right text-muted"></i>
+          </div>
+          <!-- End Card Pasien 2 -->
+
+        </div>
+        <!-- End Daftar Pasien -->
+
+      </div>
+      <!-- ------ END ISI HALAMAN ------ -->
+
+    </main>
+    <!-- ===================== END KONTEN UTAMA ===================== -->
+
+  </div>
+  <!-- End wrapper utama -->
+
+  <!-- Bootstrap JS (diperlukan untuk komponen interaktif Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

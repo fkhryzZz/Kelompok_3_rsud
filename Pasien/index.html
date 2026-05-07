@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Pasien</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Pasien/css/style.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            
+            <nav class="col-md-2 d-none d-md-block sidebar py-4">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-grid"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-calendar-event"></i> Janji Temu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="bi bi-people"></i> Pasien</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-capsule"></i> Dokter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-file-earmark-medical"></i> Jadwal Dokter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-diagram-3"></i> Departemen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-credit-card"></i> Pembayaran</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-10 ms-sm-auto px-md-4 py-4 main-container">
+                <div class="content-wrapper p-5">
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                        <div class="search-box">
+                            <i class="bi bi-search"></i>
+                            <input type="text" class="form-control border-0 bg-transparent" placeholder="Pencarian">
+                        </div>
+                        <div class="admin-profile d-flex align-items-center bg-light px-3 py-2">
+                            <div class="avatar-sm me-2">A</div>
+                            <span class="fw-bold me-2">Admin</span>
+                            <i class="bi bi-chevron-down small"></i>
+                        </div>
+                    </div>
+
+                    <h2 class="section-title mb-4">Daftar Pasien</h2>
+
+                    <!-- Patient List Container -->
+                    <div class="patient-list d-flex flex-column gap-3">
+                        
+                        <!-- Card Pasien 1 -->
+                        <div class="patient-card d-flex align-items-center justify-content-between p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-lg bg-dark text-white me-4">SS</div>
+                                <div>
+                                    <h5 class="mb-1 fw-bold">Sahla Saputra <span class="badge badge-status">AKTIF</span></h5>
+                                    <p class="mb-0 text-muted small">PASIEN : 01</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-muted"></i>
+                        </div>
+
+                        <div class="patient-card d-flex align-items-center justify-content-between p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-lg bg-dark text-white me-4">RR</div>
+                                <div>
+                                    <h5 class="mb-1 fw-bold">Dimas kanjeng <span class="badge badge-status">AKTIF</span></h5>
+                                    <p class="mb-0 text-muted small">PASIEN : 02</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

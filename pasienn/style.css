@@ -1,0 +1,250 @@
+/* 
+  ============================================
+  style.css — Halaman Daftar Pasien
+  ============================================
+
+  STRUKTUR CSS ini dibagi per komponen:
+  1. Global / Reset
+  2. Sidebar
+  3. Topbar
+  4. Patient Card
+  ============================================
+*/
+
+/* =====================
+   1. GLOBAL / RESET
+   ===================== */
+
+/* 
+  PELAJARI: Google Fonts diimport di CSS, bukan di HTML.
+  Ini cara yang lebih clean untuk memisahkan concern.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f5f6fa;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+
+/* =====================
+   2. SIDEBAR
+   ===================== */
+
+/*
+  PELAJARI: Sidebar punya lebar tetap (fixed width).
+  Warna putih dengan border tipis di kanan sebagai pemisah visual.
+*/
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  border-right: 1px solid #e8eaed;
+}
+
+/* Brand / Logo di atas sidebar */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+}
+
+.brand-icon {
+  background-color: #1a1a2e;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* 
+  PELAJARI: Setiap link navigasi di sidebar.
+  Kita buat dari <a> tag biasa, bukan button, sesuai semantik HTML.
+*/
+.nav-item-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #6b7280;       /* Warna teks abu untuk item tidak aktif */
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.18s ease; /* Animasi hover halus */
+}
+
+/* State: saat mouse hover di atas item */
+.nav-item-link:hover {
+  background-color: #f3f4f6;
+  color: #1a1a2e;
+}
+
+/* 
+  State: item yang sedang aktif (halaman yang sedang dibuka).
+  PELAJARI: Kita tambahkan kelas "active" di HTML untuk ini.
+*/
+.nav-item-link.active {
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+.nav-item-link i {
+  font-size: 1rem;
+}
+
+
+/* =====================
+   3. TOPBAR / HEADER
+   ===================== */
+
+.topbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8eaed;
+  position: sticky;    /* Topbar tetap di atas saat konten di-scroll */
+  top: 0;
+  z-index: 10;
+}
+
+/* Wrapper input pencarian */
+.search-wrapper {
+  width: 260px;
+}
+
+/* 
+  PELAJARI: .input-group di Bootstrap terdiri dari:
+  - .input-group-text (box icon di kiri)
+  - .form-control (field inputnya)
+  Kita override beberapa style Bootstrap di sini.
+*/
+.search-icon-box {
+  background-color: #f5f6fa;
+  border: 1px solid #e8eaed;
+  border-right: none;
+  color: #9ca3af;
+}
+
+.search-input {
+  background-color: #f5f6fa;
+  border: 1px solid #e8eaed;
+  border-left: none;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Hilangkan border biru bawaan Bootstrap saat input di-fokus */
+.search-input:focus {
+  box-shadow: none;
+  border-color: #e8eaed;
+  background-color: #f5f6fa;
+}
+
+/* Avatar lingkaran untuk Admin di pojok kanan */
+.avatar-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #1a1a2e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.admin-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+
+/* =====================
+   4. ISI HALAMAN (PAGE BODY)
+   ===================== */
+
+.page-body {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+
+/* =====================
+   5. PATIENT CARD
+   ===================== */
+
+/*
+  PELAJARI: Card pasien menggunakan background putih dengan
+  border-radius untuk sudut membulat, dan box-shadow tipis
+  agar terlihat "mengambang" di atas background abu-abu.
+*/
+.patient-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #f0f1f3;
+  cursor: pointer;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+/* Efek hover pada card pasien */
+.patient-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  transform: translateY(-1px); /* Sedikit naik saat hover */
+}
+
+/* 
+  Avatar pasien: kotak gelap dengan inisial nama.
+  PELAJARI: Ini pola umum untuk menampilkan user tanpa foto profil.
+*/
+.patient-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  flex-shrink: 0; /* Agar avatar tidak mengecil */
+}
+
+.patient-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+/* Badge "AKTIF" */
+.badge-aktif {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #16a34a;
+  background-color: #dcfce7;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+}
+
+.patient-id {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin-top: 2px;
+  font-weight: 500;
+}
