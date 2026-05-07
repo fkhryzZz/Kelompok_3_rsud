@@ -1,10 +1,10 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa; /* Background luar abu-abu sangat muda */
+    background-color: #f8f9fa;
     color: #2c3e50;
 }
 
-/* Sidebar Styling */
+
 .sidebar {
     background-color: white;
 }
@@ -31,19 +31,17 @@ body {
     color: #2d3748;
 }
 
-/* Main Wrapper with rounded corner */
 .main-container {
     background-color: #f8f9fa;
 }
 
 .content-wrapper {
     background-color: white;
-    border-radius: 60px; /* Lengkungan besar di container utama */
+    border-radius: 60px;
     min-height: 90vh;
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
 }
 
-/* Search Box */
 .search-box {
     background-color: #f1f5f9;
     border-radius: 15px;
@@ -57,7 +55,6 @@ body {
     color: #94a3b8;
 }
 
-/* Admin Profile */
 .admin-profile {
     border-radius: 25px;
     cursor: pointer;
@@ -75,14 +72,12 @@ body {
     font-size: 0.75rem;
 }
 
-/* Typography */
 .section-title {
     font-weight: 800;
     color: #1a202c;
     margin-left: 10px;
 }
 
-/* Patient Cards */
 .patient-card {
     background-color: #f8fafc;
     border: 1px solid #edf2f7;
