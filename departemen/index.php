@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSUD Bakti Permana - Departemen</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Menggunakan Font Awesome untuk ikon sidebar -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
+    
+    <div class="container-fluid">
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo">
-                <img src="https://via.placeholder.com/40" alt="Logo">
-                <h2>RSUD <span>BAKTI PERMANA</span></h2>
+                <img src="../assets/images/logo.png" alt="Logo" class="logo-image">
             </div>
             <nav>
                 <ul>
@@ -57,7 +55,6 @@
                 foreach ($layanan as $item) : ?>
                     <div class="card">
                         <div class="card-image">
-                            <img src="https://via.placeholder.com/300x150" alt="Stetoskop">
                         </div>
                         <div class="card-body">
                             <h3><?php echo $item['judul']; ?></h3>
