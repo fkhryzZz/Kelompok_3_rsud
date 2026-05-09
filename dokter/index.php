@@ -13,8 +13,8 @@
 </head>
 <body class="bg-light">
 
-<section class="container mt-5">
-    <div class="card shadow-sm border-0 p-4">
+<section class="container-fluid cont-dokter">
+    <div class="cont-table card shadow-sm border-0 p-4">
         <h1 class="mb-4 text-primary fw-bold">
             <i class="bi bi-hospital-fill"></i> Daftar Dokter
         </h1>
