@@ -45,7 +45,7 @@
                             <td class="fw-medium"><?= $dokter['nama']; ?></td>
                             <td><span class="badge bg-info text-dark"><?= $dokter['spesialis']; ?></span></td>
                             <td><?= $dokter['jadwal']; ?></td>
-                        </tr>
+                        </tr>b  
                     <?php endforeach; ?>
                 </tbody>
             </table>
