@@ -44,12 +44,12 @@
                 <?php
                 // Data simulasi untuk kartu layanan
                 $layanan = [
-                    ["judul" => "Layanan Umum", "desc" => "Layanan kesehatan menyeluruh untuk keluarga."],
-                    ["judul" => "Layanan Umum", "desc" => "Layanan kesehatan menyeluruh untuk keluarga."],
-                    ["judul" => "Layanan Umum", "desc" => "Layanan kesehatan menyeluruh untuk keluarga."],
-                    ["judul" => "Layanan Umum", "desc" => "Layanan kesehatan menyeluruh untuk keluarga."],
-                    ["judul" => "Layanan Umum", "desc" => "Layanan kesehatan menyeluruh untuk keluarga."],
-                    ["judul" => "Layanan Umum", "desc" => "Layanan kesehatan menyeluruh untuk keluarga."]
+                    ["judul" => "Poli Umum", "desc" => "Layanan kesehatan menyeluruh untuk keluarga."],
+                    ["judul" => "Poli Gigi", "desc" => "Layanan kesehatan gigi dan mulut."],
+                    ["judul" => "Poli Kandungan", "desc" => "Layanan kesehatan ibu hamil dan nifas."],
+                    ["judul" => "Poli Anak", "desc" => "Layanan kesehatan anak-anak."],
+                    ["judul" => "Poli Jantung", "desc" => "Layanan kesehatan jantung."],
+                    ["judul" => "Poli Saraf", "desc" => "Layanan kesehatan sistem saraf."]
                 ];
 
                 foreach ($layanan as $item) : ?>
