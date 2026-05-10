@@ -31,6 +31,7 @@
             <header>
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
+                    <img src="../assets/images/search.svg" alt="Search Icon" class="search-icon">
                     <input type="text" placeholder="Pencarian">
                 </div>
                 <div class="user-profile">
@@ -41,30 +42,49 @@
 
             <section class="card-grid">
                 <?php
-                // Data simulasi untuk kartu layanan
-                $layanan = [
-                    ["judul" => "Poli Umum", "desc" => "Layanan kesehatan menyeluruh untuk keluarga."],
-                    ["judul" => "Poli Gigi", "desc" => "Layanan kesehatan gigi dan mulut."],
-                    ["judul" => "Poli Kandungan", "desc" => "Layanan kesehatan ibu hamil dan nifas."],
-                    ["judul" => "Poli Anak", "desc" => "Layanan kesehatan anak-anak."],
-                    ["judul" => "Poli Jantung", "desc" => "Layanan kesehatan jantung."],
-                    ["judul" => "Poli Saraf", "desc" => "Layanan kesehatan sistem saraf."]
+// 1. Data harus dipisah per item (Poli)
+$layanan = [
+    [
+        "judul"  => "Poli Umum",
+        "desc"   => "Layanan kesehatan menyeluruh.",
+        "gambar" => "../assets/images/poliumum.png" // Unik untuk Poli Umum
+    ],
+    [
+        "judul"  => "Poli Gigi",
+        "desc"   => "Layanan kesehatan gigi dan mulut.",
+        "gambar" => "../assets/images/poligigi.jpg" // Unik untuk Poli Gigi
+    ],
+    [
+        "judul"  => "Poli Kandungan",
+        "desc"   => "Layanan kesehatan khusus ibu hamil dan nifas.",
+        "gambar" => "../assets/images/poli-kandungan.jpg" // Unik untuk Poli Kandungan
+    ],
+    [
+        "judul"  => "Poli Anak",
+        "desc"   => "Layanan kesehatan khusus anak-anak.",
+        "gambar" => "../assets/images/polianak.jpg" // Unik untuk Poli Anak
+    ],
+    [
+        "judul"  => "Poli Bedah",
+        "desc"   => "Layanan kesehatan untuk tindakan bedah.",
+        "gambar" => "../assets/images/polibedah.jpg" // Unik untuk Poli Bedah
+    ]
+];
+?>
 
-                ];
-
-                foreach ($layanan as $item) : ?>
-                    <div class="card">
-                        <div class="card-image">
-                        </div>
-                        <div class="card-body">
-                            <h3><?php echo $item['judul']; ?></h3>
-                            <p><?php echo $item['desc']; ?></p>
-                            <button class="btn-detail">LIHAT DETAIL</button>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </section>
-        </main>
-    </div>
+<div class="container-layanan">
+    <?php foreach ($layanan as $item) : ?>
+        <div class="card">
+            <div class="card-image">
+                <img src="<?php echo $item['gambar']; ?>" alt="Gambar Layanan">
+            </div>
+            <div class="card-body">
+                <h3><?php echo $item['judul']; ?></h3>
+                <p><?php echo $item['desc']; ?></p>
+                <button>LIHAT DETAIL</button>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
 </body>
 </html>
