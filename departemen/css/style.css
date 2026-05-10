@@ -1,5 +1,5 @@
 .body {
-    margin:0;
+    margin: 0;
     font-family: 'Inter', sans-serif;
     background-image: url('../../assets/images/bg.png');
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     gap: 15px;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 /* Sidebar */
@@ -21,7 +21,7 @@
 }
 
 .logo {
-    width:100%;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
