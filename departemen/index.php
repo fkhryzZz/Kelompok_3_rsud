@@ -22,7 +22,6 @@
                     <li><i class="fas fa-user-md"></i> Dokter</li>
                     <li><i class="fas fa-file-medical-alt"></i> Jadwal Dokter</li>
                     <li class="active"><i class="fas fa-hospital"></i> Departemen</li>
-                    <li><i class="fas fa-wallet"></i> Pembayaran</li>
                 </ul>
             </nav>
         </aside>
@@ -50,6 +49,7 @@
                     ["judul" => "Poli Anak", "desc" => "Layanan kesehatan anak-anak."],
                     ["judul" => "Poli Jantung", "desc" => "Layanan kesehatan jantung."],
                     ["judul" => "Poli Saraf", "desc" => "Layanan kesehatan sistem saraf."]
+
                 ];
 
                 foreach ($layanan as $item) : ?>

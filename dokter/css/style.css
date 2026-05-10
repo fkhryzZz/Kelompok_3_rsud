@@ -7,6 +7,11 @@ body {
     background-repeat: no-repeat;    
 }
 
+.container-fluid {
+    display: flex;
+    min-height: 100vh;
+}
+
 .sidebar {
     width: 250px; /* Lebar tetap untuk menu samping */
     height: 100vh;
@@ -53,6 +58,7 @@ body {
 .table tbody tr td:last-child { border-radius: 0 15px 15px 0; }
 
 .img-dokter {
+    background-image: url("../../assets/images/dokter.png");
     width: 45px;
     height: 45px;
     border-radius: 12px;
