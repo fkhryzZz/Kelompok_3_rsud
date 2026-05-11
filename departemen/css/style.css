@@ -64,6 +64,12 @@ header {
     margin-bottom: 30px;
 }
 
+.search-icon {
+    background-image: url("../assets/icons/search.svg");
+    align-items: left;
+    
+}
+
 .search-bar {
     background: #acb7c2;
     padding: 12px 20px;

@@ -68,7 +68,10 @@ $layanan = [
         "judul"  => "Poli Bedah",
         "desc"   => "Layanan kesehatan untuk tindakan bedah.",
         "gambar" => "../assets/images/polibedah.jpg" // Unik untuk Poli Bedah
-    ]
+    ],
+    [   "judul" => "Poli Jantung",
+        "desc"  => "Layanan kesehatan untuk tindakan terhadap jantung",
+        "gambar"=> "../asstets/images/polijantung.jpg"]
 ];
 ?>
 
