@@ -28,7 +28,7 @@ $stmt = $conn->query($sql);
                 echo "<tr>";
                 echo "<td>" . $p['id_pasien'] . "</td>";
                 echo "<td>" . $p['nama_lengkap'] . "</td>";
-                echo "<td>" . $p['no_telp'] . "</td>";
+                echo "<td>" . $p['nik'] . "</td>";
                 echo "<td>" . $p['alamat'] . "</td>";
                 echo "<td>
                         <a href='views.php?id=" . $p['id_pasien'] . "'>Detail</a> |

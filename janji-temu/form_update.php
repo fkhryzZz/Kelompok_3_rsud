@@ -33,7 +33,7 @@ try {
         <input type="text" name="nama_lengkap" value="<?= $pasien['nama_lengkap'] ?>" required><br><br>
 
         <label>No Telp:</label><br>
-        <input type="text" name="no_telp" value="<?= $pasien['no_telp'] ?>"><br><br>
+        <input type="text" name="nik" value="<?= $pasien['nik'] ?>"><br><br>
 
         <label>Alamat:</label><br>
         <textarea name="alamat"><?= $pasien['alamat'] ?></textarea><br><br>

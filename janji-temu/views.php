@@ -46,7 +46,7 @@ try {
         </tr>
         <tr>
             <td><strong>No. WhatsApp</strong></td>
-            <td>: <?= $pasien['no_telp'] ?></td>
+            <td>: <?= $pasien['nik'] ?></td>
         </tr>
         <tr>
             <td><strong>Email</strong></td>

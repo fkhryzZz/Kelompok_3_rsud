@@ -12,13 +12,12 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $nama_pasien = $_POST['nama_pasien'];
-    $no_telp     = $_POST['no_telp'];
+    $nik     = $_POST['nik'];
     $layanan     = $_POST['layanan'];
     $tgl_janji   = $_POST['tgl_janji'];
     $jam_janji   = $_POST['jam_janji'];
+    $email          = $_POST['email'];
 
-    $email          = "-";          
     $alamat         = "-";         
     $status_anggota = "AKTIF";      
     $fk_dokter      = 1;           
@@ -28,10 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->begin_transaction();
 
     try {
-        $query_pasien = "INSERT INTO tb_pasien (nama_lengkap, no_telp, email, alamat, status_anggota) VALUES (?, ?, ?, ?, ?)";
+        $query_pasien = "INSERT INTO tb_pasien (nik, email, alamat, status_anggota) VALUES (?, ?, ?, ?)";
         $stmt_pasien = $conn->prepare($query_pasien);
         
-        $stmt_pasien->bind_param("sssss", $nama_pasien, $no_telp, $email, $alamat, $status_anggota);
+        $stmt_pasien->bind_param("ssss", $nik, $email, $alamat, $status_anggota);
         $stmt_pasien->execute();
 
         $id_pasien_baru = $conn->insert_id;
