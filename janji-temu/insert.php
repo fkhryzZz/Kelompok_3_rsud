@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo "<script>
                 alert('Pendaftaran berhasil! Nomor ID Pasien Anda: $id_pasien_baru');
-                window.location.href = 'index.html'; // Ganti dengan nama file HTML form Anda
+                window.location.href = 'index.html';
               </script>";
 
     } catch (Exception $e) {
