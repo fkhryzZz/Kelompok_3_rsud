@@ -2,7 +2,6 @@
 // Memanggil koneksi database
 require_once "../config/db.php";
 
-// Memastikan request datang dari form POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // 1. Menangkap data dari form

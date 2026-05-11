@@ -56,7 +56,7 @@ try {
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-body);
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-image: url(../../assets/images/bg.png);
             background-size: 20px 20px;
             height: 100vh;
             overflow: hidden;

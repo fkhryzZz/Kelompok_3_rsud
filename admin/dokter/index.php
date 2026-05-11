@@ -1,6 +1,4 @@
 <?php
-// Memanggil koneksi database
-// Sesuaikan path db.php dengan struktur folder Anda, misalnya "../db.php" jika file ini di dalam folder 'dokter'
 require_once "../../config/db.php"; 
 
 $dokters = [];

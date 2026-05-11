@@ -1,5 +1,4 @@
 <?php
-// Memanggil koneksi database
 require_once "../../config/db.php";
 
 $departemens = [];
@@ -9,7 +8,6 @@ if (isset($_GET['id'])) {
     $id_dokter = $_GET['id'];
     
     try {
-        // Mengambil data dokter beserta email dari tb_users
         $sql = "SELECT d.*, u.email 
                 FROM tb_dokter d 
                 LEFT JOIN tb_users u ON d.id_user = u.id_user 
