@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSUD Bakti Permana - One Stop Health Solution</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container px-4">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Logo"
+                    onerror="this.src='https://via.placeholder.com/130x40?text=RSUD+Logo'">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dokter">Dokter</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-4">
+                    <a href="login/index.php"
+                        class="text-decoration-none d-none d-sm-block small fw-bold text-secondary">Login</a>
+                    <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                        Janji Temu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Janji Temu -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content shadow-lg">
+                <div class="row g-0">
+                    <!-- Sidebar Modal -->
+                    <div class="col-lg-4 modal-sidebar d-flex flex-column">
+                        <div>
+                            <div class="icon-box shadow-lg mb-4" style="background: var(--accent-cyan);">
+                                <i data-lucide="heart-pulse" style="color: var(--primary-blue);"></i>
+                            </div>
+                            <h2 class="fw-bolder fst-italic text-white mb-4"
+                                style="letter-spacing: -1px; font-size: 2rem;">
+                                Langkah Kecil <br>untuk Hidup <br>Lebih Sehat.
+                            </h2>
+                            <p class="text-white-50 small mb-5">
+                                Pendaftaran online memudahkan Anda mendapatkan nomor antrean lebih awal tanpa harus
+                                menunggu.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center gap-2 text-white-50">
+                                <i data-lucide="shield-check" class="text-info" style="width: 16px;"></i>
+                                <span class="text-uppercase fw-bold" style="font-size: 8px; letter-spacing: 2px;">Data
+                                    Terenkripsi Aman</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Modal -->
+                    <div class="col-lg-8 p-4 p-md-5 bg-white position-relative">
+                        <button type="button" class="btn-close position-absolute top-0 end-0 m-4"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        <div class="mb-5">
+                            <h3 class="fw-bold mb-1">Formulir Pendaftaran</h3>
+                            <p class="text-muted small">Lengkapi data pasien di bawah ini secara akurat.</p>
+                        </div>
+
+                        <form action="tambah.php" method="POST">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <label class="form-label-custom">Nama Pasien</label>
+                                    <input type="text" name="nama_pasien" class="form-control form-control-custom"
+                                        placeholder="Nama lengkap sesuai KTP">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label-custom">WhatsApp</label>
+                                    <input type="tel" name="no_whatsapp" class="form-control form-control-custom"
+                                        placeholder="0812xxxx">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label-custom">Layanan</label>
+                                    <select name="layanan" class="form-select form-control-custom">
+                                        <option value="">Pilih Departemen</option>
+                                        <option value="umum">Umum</option>
+                                        <option value="jantung">Kardiologi</option>
+                                        <option value="anak">Pediatrik</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label-custom">Rencana Tanggal Kunjungan</label>
+                                    <input type="date" name="tanggal_kunjungan"
+                                        class="form-control form-control-custom">
+                                </div>
+                                <div class="col-12 mt-5">
+                                    <button type="submit" class="btn btn-primary-custom w-100 py-3 rounded-4 shadow-lg">
+                                        KONFIRMASI JADWAL
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container px-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="hero-badge">Terakreditasi Paripurna</span>
+                    <h1 class="hero-title">
+                        Kesehatan Anda, <br><span style="color: var(--primary-blue)">Prioritas Utama</span> Kami.
+                    </h1>
+                    <p class="text-muted fs-5 mb-5 fw-medium" style="max-width: 500px;">
+                        RSUD Bakti Permana hadir dengan teknologi medis terkini dan tim dokter spesialis berpengalaman
+                        untuk memberikan pelayanan kesehatan terbaik.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <button
+                            class="btn btn-primary-custom px-5 py-3 d-flex align-items-center justify-content-center gap-2">
+                            Buat Janji Temu <i data-lucide="calendar" style="width: 18px;"></i>
+                        </button>
+                        <button
+                            class="btn btn-light border px-5 py-3 rounded-pill fw-bold text-secondary d-flex align-items-center justify-content-center gap-2">
+                            Lihat Fasilitas <i data-lucide="play-circle" style="width: 18px;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 position-relative">
+                    <div
+                        style="position: absolute; top: -40px; left: -40px; width: 160px; height: 160px; background: rgba(34, 211, 238, 0.15); border-radius: 50%; filter: blur(40px);">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1200"
+                        class="img-fluid rounded-50 hero-image" alt="Hospital">
+
+                    <div class="floating-box">
+                        <div
+                            style="width: 48px; height: 48px; background: #dcfce7; border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="clock" style="color: #16a34a; width: 24px;"></i>
+                        </div>
+                        <div>
+                            <p class="m-0 text-uppercase fw-bold text-muted"
+                                style="font-size: 9px; letter-spacing: 1px;">Layanan Darurat</p>
+                            <p class="m-0 fw-bold fs-5">24 Jam Standby</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Section -->
+    <section id="layanan" class="py-5 bg-white">
+        <div class="container px-4 py-5">
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-8">
+                    <h4 class="text-uppercase text-primary fw-bold mb-3"
+                        style="font-size: 11px; letter-spacing: 3px;">Spesialisasi</h4>
+                    <h2 class="display-4 mb-0 fw-bold" style="letter-spacing: -2px;">Layanan Unggulan Kami</h2>
+                </div>
+                <div class="col-lg-4 mt-3">
+                    <p class="text-muted mb-0 fw-medium">Layanan medis komprehensif didukung oleh teknologi mutakhir dan
+                        tim profesional.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon-box shadow-sm">
+                            <i data-lucide="heart-pulse" class="icon-layanan"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Kardiologi</h3>
+                        <p class="text-muted small lh-lg">Perawatan jantung intensif dengan tim spesialis bedah jantung
+                            terbaik.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon-box shadow-sm">
+                            <i data-lucide="baby" class="icon-layanan"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Pediatrik</h3>
+                        <p class="text-muted small lh-lg">Layanan kesehatan anak yang ramah dan menyenangkan bagi si
+                            kecil.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="icon-box shadow-sm">
+                            <i data-lucide="brain" class="icon-layanan"></i>
+                        </div>
+                        <h3 class="fw-bold mb-3">Neurologi</h3>
+                        <p class="text-muted small lh-lg">Penanganan gangguan saraf dan otak secara komprehensif.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dokter Section -->
+    <section id="dokter" class="py-5" style="background-color: var(--slate-50);">
+        <div class="container px-4 py-5 text-center">
+            <div class="mb-5">
+                <h2 class="display-6 fw-bold mb-2" style="letter-spacing: -1px;">Bertemu Tim Ahli Kami</h2>
+                <p class="text-muted fw-medium">Dokter berdedikasi tinggi dengan pengalaman puluhan tahun.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Dokter 1 -->
+                <div class="col-6 col-lg-3">
+                    <div class="doctor-card shadow-sm">
+                        <img src="https://i.pinimg.com/736x/64/97/35/649735d84cf4fba6d95e0192d27617ff.jpg" alt="Doctor">
+                        <div class="doctor-overlay">
+                            <button class="btn btn-light rounded-circle p-2"><i data-lucide="instagram"
+                                    style="width: 16px;"></i></button>
+                            <button class="btn btn-light rounded-circle p-2"><i data-lucide="linkedin"
+                                    style="width: 16px;"></i></button>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold m-0">Dr. Petra Winsburry</h5>
+                    <p class="text-primary text-uppercase fw-bold m-0 mt-2"
+                        style="font-size: 9px; letter-spacing: 1px;">Ahli Bedah Saraf</p>
+                </div>
+                <!-- Dokter 2 -->
+                <div class="col-6 col-lg-3">
+                    <div class="doctor-card shadow-sm">
+                        <img src="https://i.pinimg.com/1200x/8f/a7/a1/8fa7a15e6ccc39d177b14170701c26bb.jpg"
+                            alt="Doctor">
+                         <div class="doctor-overlay">
+                            <button class="btn btn-light rounded-circle p-2"><i data-lucide="instagram"
+                                    style="width: 16px;"></i></button>
+                            <button class="btn btn-light rounded-circle p-2"><i data-lucide="linkedin"
+                                    style="width: 16px;"></i></button>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold m-0">Dr. Sarah Kencana</h5>
+                    <p class="text-primary text-uppercase fw-bold m-0 mt-2"
+                        style="font-size: 9px; letter-spacing: 1px;">Spesialis Jantung</p>
+                </div>
+                <!-- Dokter 3 -->
+                <div class="col-6 col-lg-3">
+                    <div class="doctor-card shadow-sm">
+                        <img src="https://i.pinimg.com/736x/50/01/6a/50016a8c9ef67cd3dbf61f9097cbf942.jpg" alt="Doctor">
+                         <div class="doctor-overlay">
+                            <button class="btn btn-light rounded-circle p-2"><i data-lucide="instagram"
+                                    style="width: 16px;"></i></button>
+                            <button class="btn btn-light rounded-circle p-2"><i data-lucide="linkedin"
+                                    style="width: 16px;"></i></button>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold m-0">Dr. Budi Santoso</h5>
+                    <p class="text-primary text-uppercase fw-bold m-0 mt-2"
+                        style="font-size: 9px; letter-spacing: 1px;">Spesialis Anak</p>
+                </div>
+                <!-- Dokter 4 -->
+                <div class="col-6 col-lg-3">
+                    <div class="doctor-card shadow-sm">
+                        <img src="https://i.pinimg.com/736x/35/60/6f/35606f296e52742f503fb57360c9fafd.jpg" alt="Doctor">
+                         <div class="doctor-overlay">
+                            <button class="btn btn-light rounded-circle p-2"><i data-lucide="instagram"
+                                    style="width: 16px;"></i></button>
+                            <button class="btn btn-light rounded-circle p-2"><i data-lucide="linkedin"
+                                    style="width: 16px;"></i></button>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold m-0">Dr. Lisa Permata</h5>
+                    <p class="text-primary text-uppercase fw-bold m-0 mt-2"
+                        style="font-size: 9px; letter-spacing: 1px;">Dermatologi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-white border-top pt-5 pb-4">
+        <div class="container px-4 mt-5">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-5">
+                    <img src="assets/images/logo.png" alt="Logo" class="mb-4" style="width: 130px;"
+                        onerror="this.src='https://via.placeholder.com/130x40?text=RSUD+Logo'">
+                    <p class="text-muted fw-medium fs-5 lh-base" style="max-width: 350px;">
+                        Menghadirkan pelayanan kesehatan berkelas dunia di tengah masyarakat Kota Sejahtera.
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-uppercase fw-bold text-muted mb-4" style="font-size: 10px; letter-spacing: 2px;">
+                        Navigasi</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home"
+                                class="text-decoration-none text-dark fw-bold small hover-link">Beranda</a></li>
+                        <li class="mb-2"><a href="#layanan"
+                                class="text-decoration-none text-dark fw-bold small hover-link">Layanan</a></li>
+                        <li class="mb-2"><a href="#dokter"
+                                class="text-decoration-none text-dark fw-bold small hover-link">Dokter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-uppercase fw-bold text-muted mb-4" style="font-size: 10px; letter-spacing: 2px;">
+                        Kontak</h6>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center gap-3 mb-3 small fw-bold">
+                            <i data-lucide="phone" style="width: 18px; color: var(--primary-blue);"></i> (021) 1234-567
+                        </li>
+                        <li class="d-flex align-items-center gap-3 mb-3 small fw-bold">
+                            <i data-lucide="mail" style="width: 18px; color: var(--primary-blue);"></i> halo@rsudbp.com
+                        </li>
+                        <li class="d-flex align-items-center gap-3 mb-3 small fw-bold">
+                            <i data-lucide="map-pin" style="width: 18px; color: var(--primary-blue);"></i> Kota
+                            Sejahtera, Indonesia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-5 border-top d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
+                <p class="m-0 text-muted fst-italic fw-bold" style="font-size: 10px; letter-spacing: 1px;">
+                    &copy; 2026 RSUD Bakti Permana. Managed by Kelompok 6.
+                </p>
+                <div class="d-flex gap-4">
+                    <i data-lucide="facebook" class="text-secondary cursor-pointer" style="width: 18px;"></i>
+                    <i data-lucide="instagram" class="text-secondary cursor-pointer" style="width: 18px;"></i>
+                    <i data-lucide="twitter" class="text-secondary cursor-pointer" style="width: 18px;"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Inisialisasi Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.glass-nav');
+            if (window.scrollY > 50) {
+                nav.style.height = '70px';
+                nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+            } else {
+                nav.style.height = '80px';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Pastikan ikon dimuat saat modal dibuka
+        const modalEl = document.getElementById('appointmentModal');
+        modalEl.addEventListener('shown.bs.modal', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
